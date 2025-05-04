@@ -19,9 +19,33 @@ const BlogList = () => {
 
       <div className="flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24">
       {blog_data.filter((item)=> menue=="All"?true:item.category==menue ).map((item,index)=>{
-        return <BlogItem key={index} image={item.image} title={item.title} description={item.description} category={item.category}/>
+        return <BlogItem key={index} id={item.id} image={item.image} title={item.title} description={item.description} category={item.category}/>
       })}
       </div>
+      <hr className="mt-10" />
+
+          {/* News Latter */}
+        <div className="my-8">
+        <h3 className="text-2xl sm:text-3xl text-center font-medium mt-10">
+            News Latter
+          </h3>
+          <form
+            className="flex justify-between max-w-[500px] scale-75 sm:scale-100 shadow-[7px_7px_0px_#000000] mx-auto mt-10 border border-black "
+            action=""
+          >
+            <input
+              type="email"
+              placeholder="Enter Your Email "
+              className="pl-4 outline-none"
+            />
+            <button
+              className="border-l border-black py-4 px-4 sm:px-8 active:bg-gray-600 active:text-white"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
     </div>
   );
 };
