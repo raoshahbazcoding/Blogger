@@ -14,9 +14,10 @@ const Header = () => {
             alt="LOGO"
             className="w-[130px] sm:w-auto"
           />
+          <Link href='/admin'>
           <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black shadow-[-7px_7px_0px_#000000]">
             Get Started <Image src={assets.arrow} />
-          </button>
+          </button></Link>
         </div>
 
         {/* h1 And Paragraph */}
