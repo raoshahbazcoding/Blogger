@@ -10,6 +10,7 @@ const Home = () => {
     <>
 
      <Header/> 
+     
     <BlogList/>
     </>
   )
