@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Image to Next.js API</title>
+</head>
+<body>
+  <h2>Upload Image</h2>
+  <form action="http://localhost:3000/api/blog" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <h3>Uploaded Image Preview</h3>
+  <img id="preview" src="" alt="No image uploaded yet" style="max-width: 300px; display: none;" />
+
+  <script>
+    const form = document.querySelector('form');
+    const preview = document.getElementById('preview');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: formData
+      });
+  
+      const data = await res.json();
+      console.log(data);
+  
+      if (data.imgUrl) {
+        const fullUrl = `http://localhost:3000${data.imgUrl}`;
+        preview.src = fullUrl;
+        preview.style.display = 'block';
+      }
+    });
+  </script>
+  
+</body>
+</html> -->
