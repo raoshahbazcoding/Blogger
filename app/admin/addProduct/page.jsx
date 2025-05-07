@@ -43,10 +43,19 @@ const page = () => {
 
     const response = await axios.post('/api/blog',formData);
     if (response.data.success) {
-      toast.success(response.data.msg)
-    }
-    else{
-      toast.error("Error")
+      toast.success(response.data.msg || "Blog posted!");
+     
+    //  After Sumbit Successfully It Will reset All Fields
+      setImage(false);
+      setData({
+        title:"",
+        description:"",
+        category:"Startup",
+        author:"Alex Bennett",
+        authorImg:"/authorImge.png",
+      })
+    } else {
+      toast.error("Error saving blog");
     }
   }
 
