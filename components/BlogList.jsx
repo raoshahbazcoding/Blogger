@@ -44,7 +44,7 @@ const BlogList = () => {
             News Latter
           </h3>
           <form
-            className="flex justify-between max-w-[500px] scale-75 sm:scale-100 shadow-[7px_7px_0px_#000000] mx-auto mt-10 border border-black "
+            className="flex justify-between max-w-[500px] scale-75 sm:scale-100 shadow-[-7px_7px_0px_#000000] mx-auto mt-10 border border-black "
             action=""
           >
             <input
